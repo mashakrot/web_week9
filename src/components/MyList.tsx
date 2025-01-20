@@ -17,7 +17,7 @@ const MyList: React.FC<ListProps> = ({ header, items, updateList }) => {
           <li
             key={item.id}
             style={{
-              textDecoration: item.clicked ? 'line-through' : 'none',
+              textDecoration: item.clicked ? 'line-through' : '',
               cursor: 'pointer',
             }}
             onClick={() => updateList(item.id)} // Toggle clicked state on click
