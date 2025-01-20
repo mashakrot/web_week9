@@ -5,7 +5,7 @@ type TItem = { id: string; text: string; clicked: boolean };
 interface ListProps {
   header: string;
   items: TItem[];
-  updateList: (id: string) => void; // Function to toggle "clicked"
+  updateList: (id: string) => void; 
 }
 
 const MyList: React.FC<ListProps> = ({ header, items, updateList }) => {
@@ -20,8 +20,7 @@ const MyList: React.FC<ListProps> = ({ header, items, updateList }) => {
               textDecoration: item.clicked ? 'line-through' : '',
               cursor: 'pointer',
             }}
-            onClick={() => updateList(item.id)} // Toggle clicked state on click
-          >
+            onClick={() => updateList(item.id)}>
             {item.text}
           </li>
         ))}

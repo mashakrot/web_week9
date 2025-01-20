@@ -10,7 +10,6 @@ const MyContainer: React.FC = () => {
   ]);
   const [newItemText, setNewItemText] = useState('');
 
-  // Add a new item to the list
   const addItem = () => {
     if (newItemText.trim()) {
       setItems([
@@ -21,7 +20,6 @@ const MyContainer: React.FC = () => {
     }
   };
 
-  // Toggle the "clicked" attribute of an item
   const updateList = (id: string) => {
     setItems(
       items.map((item) =>
